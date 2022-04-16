@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Card, Col, Row, Table } from "react-bootstrap";
 import styled from "styled-components";
 import swal from "sweetalert";
-import { sha256, sha224 } from "js-sha256";
+import { sha256 } from "js-sha256";
+
 import moment from "moment";
 
 const NomorTujuh = ({ title }) => {
