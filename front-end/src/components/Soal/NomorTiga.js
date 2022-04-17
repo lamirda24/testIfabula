@@ -16,7 +16,6 @@ const NomorTiga = ({ title, content, button }) => {
     const res = await fetch("http://jsonplaceholder.typicode.com/posts");
     const result = await res.json();
     setData(result);
-    console.log(result, "fetch api");
   };
 
   const handleDelete = (id) => {

@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Card } from "react-bootstrap";
-
 import NomorSatu from "../Soal/NomorSatu";
 import NomorTiga from "../Soal/NomorTiga";
 import NomorTujuh from "../Soal/NomorTujuh";
 import NomorDelapan from "../Soal/NomorDelapan";
 import Sembilan from "../Soal/Sembilan";
+import Programming1 from "../Soal/Programming1";
 
 const Home = () => {
   return (
     <Container>
       <Cards>
         <CardHeader>
-          <h3>Home</h3>
+          <h3>Jawaban</h3>
         </CardHeader>
         <Card.Body>
           <Wrapper>
@@ -22,6 +22,7 @@ const Home = () => {
             <NomorTujuh title="Nomor [7] - Hashing" />
             <NomorDelapan title="Nomor [8] - Test Debug" />
             <Sembilan title="Nomor [9]" />
+            <Programming1 title="Soal Programming [buka console]" />
           </Wrapper>
         </Card.Body>
       </Cards>
