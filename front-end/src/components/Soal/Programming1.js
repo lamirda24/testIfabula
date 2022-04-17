@@ -1,8 +1,13 @@
-import React from "react";
-import { Button, Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Card, Form, InputGroup } from "react-bootstrap";
 import styled from "styled-components";
 
 const Programming1 = ({ title }) => {
+  const [data, setData] = useState({
+    number3: 0,
+    number4: 0,
+  });
+
   const nomorSatu = () => {
     const start = 50;
     const end = 100;
@@ -35,7 +40,8 @@ const Programming1 = ({ title }) => {
     console.groupEnd();
   };
 
-  const nomorTiga = (e) => {
+  const nomorTiga = () => {
+    let e = data.number3;
     let string = "";
     for (let i = 1; i <= e; i++) {
       for (let j = 1; j <= i; j++) {
@@ -49,7 +55,8 @@ const Programming1 = ({ title }) => {
     console.groupEnd();
   };
 
-  const nomorEmpat = (e) => {
+  const nomorEmpat = () => {
+    let e = data.number4;
     let number = [
       "",
       "satu",
@@ -88,33 +95,56 @@ const Programming1 = ({ title }) => {
     console.groupEnd();
   };
 
-  const handleClick = () => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
 
   return (
     <>
       <Content>
         <Card className="h-100">
           <CardHeader>{title} </CardHeader>
-          <Card.Body className="d-flex">
-            <div style={{ marginLeft: 5 }}>
+          <Card.Body className="d-grid">
+            <div style={{ margin: 10 }}>
               <Button onClick={nomorSatu} size="sm">
                 Nomor 1
               </Button>
             </div>
-            <div style={{ marginLeft: 5 }}>
+            <div style={{ margin: 10 }}>
               <Button onClick={nomorDua} size="sm">
                 Nomor 2
               </Button>
             </div>
-            <div style={{ marginLeft: 5 }}>
-              <Button onClick={() => nomorTiga(10)} size="sm">
-                Nomor 3
-              </Button>
+            <div style={{ margin: 10 }}>
+              <InputGroup className="mb-3">
+                <Button onClick={nomorTiga} size="sm">
+                  Nomor 3
+                </Button>
+                <Form.Control
+                  aria-label="Example text with button addon"
+                  aria-describedby="basic-addon1"
+                  type="number"
+                  onChange={handleChange}
+                  name="number3"
+                />
+              </InputGroup>
             </div>
-            <div style={{ marginLeft: 5 }}>
-              <Button onClick={() => nomorEmpat(5555)} size="sm">
-                Nomor 4
-              </Button>
+            <div style={{ margin: 10 }}>
+              <InputGroup className="mb-3">
+                <Button onClick={nomorEmpat} size="sm">
+                  Nomor 4
+                </Button>
+                <Form.Control
+                  aria-label="Example text with button addon"
+                  aria-describedby="basic-addon1"
+                  type="number"
+                  onChange={handleChange}
+                  name="number4"
+                  min={2000}
+                  max={9999}
+                />
+              </InputGroup>
             </div>
           </Card.Body>
           <Card.Footer
