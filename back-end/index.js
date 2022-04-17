@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
     id: 6,
     label: "Six",
   };
-  if (headers !== "6" && scope !== "user") {
+  if (headers !== "ifabula" && scope !== "user") {
     res.status(401).send({
       responseCode: 401,
       responseMessage: "UNAUTHORIZED",
