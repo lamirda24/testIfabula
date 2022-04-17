@@ -5,6 +5,7 @@ import { Card } from "react-bootstrap";
 import NomorSatu from "../Soal/NomorSatu";
 import NomorTiga from "../Soal/NomorTiga";
 import NomorTujuh from "../Soal/NomorTujuh";
+import NomorDelapan from "../Soal/NomorDelapan";
 
 const Home = () => {
   return (
@@ -16,8 +17,9 @@ const Home = () => {
         <Card.Body>
           <Wrapper>
             <NomorSatu title="Nomor [1, 2]" />
-            <NomorTiga title="Nomor [3, 4]" />
-            <NomorTujuh title="Nomor [7]" />
+            <NomorTiga title="Nomor [3, 4, 5, 6]" />
+            <NomorTujuh title="Nomor [7] - Hashing" />
+            <NomorDelapan title="Nomor [8] - Test Debug" />
           </Wrapper>
         </Card.Body>
       </Cards>

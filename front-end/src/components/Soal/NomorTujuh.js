@@ -25,7 +25,7 @@ const NomorTujuh = ({ title }) => {
               </Button>
             </div>
             <div>
-              hasil hash256 : {moment().format("DDMMYYYY")} Luthfi pria fabula
+              hasil hash256 : {moment().format("DDMMYYYY")}Luthfipriafabula
               <div>{answer}</div>
             </div>
           </Card.Body>
