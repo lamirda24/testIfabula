@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import Content from "./components/layout/Content";
 import Home from "./components/content/Home";
 import Dashboard from "./components/content/Dashboard";
+import NomorSembilan from "./components/Soal/components/NomorSembilan";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" exact element={<Content />}>
           <Route path="/" exact element={<Home />} />
           <Route path="/dashboard" exact element={<Dashboard />} />
+          <Route path="/no9" exact element={<NomorSembilan />} />
         </Route>
       </Routes>
     </BrowserRouter>

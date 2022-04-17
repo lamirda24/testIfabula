@@ -6,6 +6,7 @@ import NomorSatu from "../Soal/NomorSatu";
 import NomorTiga from "../Soal/NomorTiga";
 import NomorTujuh from "../Soal/NomorTujuh";
 import NomorDelapan from "../Soal/NomorDelapan";
+import Sembilan from "../Soal/Sembilan";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
             <NomorTiga title="Nomor [3, 4, 5, 6]" />
             <NomorTujuh title="Nomor [7] - Hashing" />
             <NomorDelapan title="Nomor [8] - Test Debug" />
+            <Sembilan title="Nomor [9]" />
           </Wrapper>
         </Card.Body>
       </Cards>
