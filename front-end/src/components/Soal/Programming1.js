@@ -83,10 +83,24 @@ const Programming1 = ({ title }) => {
         ratus += number[i] + " ratus";
       }
       if (x[2] == i && i !== 0) {
-        puluh += number[i] + " puluh";
+        if (x[2] == 1) {
+          puluh += "";
+        } else {
+          puluh += number[i] + " puluh";
+        }
       }
-      if (x[3] == i && i !== 0) {
-        satuan += number[i];
+      if (x[3] == i) {
+        if (x[2] == 1) {
+          if (x[3] > 1) {
+            satuan += number[i] + " belas";
+          } else if (x[3] == 1) {
+            satuan += "sebelas";
+          } else if (x[3] == 0) {
+            satuan += "sepuluh";
+          }
+        } else {
+          satuan += number[i];
+        }
       }
     }
     console.group("Jawaban Nomor 4");
